@@ -2,20 +2,18 @@
 #include <stdio.h>
 
 void mobilizatsia(int arr1[], int arr2[], int len){
+    if (arr1 == NULL || arr2 == NULL || len <= 0) {return;}
+        
     int *a1p0 = arr1; //указатель на первый элемент первого массива
     int *a2p0 = arr2; //указатель на второй элемент второго массива
-
-    int courier;
 
     for (int i = 0; i < len; ++i){
 
         int *cur_el1 = a1p0 + i;
-
-        courier = *cur_el1;
-
         int *cur_el2 = a2p0 + i;
-
-        *cur_el2 = courier;
+        
+        *cur_el2 = *cur_el1;
+        
     }
 }
 // ONO RABOTAET???
