@@ -18,13 +18,22 @@ void mobilizatsia(int arr1[], int arr2[], int len){
 }
 // ONO RABOTAET???
 int main(){
-    int arr1[] = {2, 2, 3, 5, 5};
-    int arr2[5];
     int len = 5;
-    mobilizatsia(arr1, arr2, len);
+    int arr1[] = {1, 5, 6, 1, 4}; // dlina - len
+    int *arr2 = (int *)malloc(sizeof(int)*len);
     
-    for (int i = 0; i < len; ++i){
-        printf("%d\n", arr2[i]);
-    }
+    printf("Perviy massiv\n");
+    for (int i = 0; i < len; ++i)
+        printf("%d ", arr1[i]);
+    
+    printf("\n");
+
+    mobilizatsia(arr1, arr2, len);
+    // vivod
+    printf("Vtoroy massiv\n");
+    for (int i = 0; i < len; ++i)
+        printf("%d ", arr2[i]);
+    printf("\n");
+    free(arr2);
     return 0;
 }
